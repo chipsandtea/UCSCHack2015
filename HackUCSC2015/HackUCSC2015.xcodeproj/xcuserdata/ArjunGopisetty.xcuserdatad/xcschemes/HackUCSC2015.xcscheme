@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F984CC031A60B57000791027"
+               BlueprintIdentifier = "F97C25251A60BF9300C972A6"
                BuildableName = "HackUCSC2015.app"
                BlueprintName = "HackUCSC2015"
                ReferencedContainer = "container:HackUCSC2015.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F984CC181A60B57000791027"
+               BlueprintIdentifier = "F97C253A1A60BF9300C972A6"
                BuildableName = "HackUCSC2015Tests.xctest"
                BlueprintName = "HackUCSC2015Tests"
                ReferencedContainer = "container:HackUCSC2015.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F984CC181A60B57000791027"
+               BlueprintIdentifier = "F97C253A1A60BF9300C972A6"
                BuildableName = "HackUCSC2015Tests.xctest"
                BlueprintName = "HackUCSC2015Tests"
                ReferencedContainer = "container:HackUCSC2015.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F984CC031A60B57000791027"
+            BlueprintIdentifier = "F97C25251A60BF9300C972A6"
             BuildableName = "HackUCSC2015.app"
             BlueprintName = "HackUCSC2015"
             ReferencedContainer = "container:HackUCSC2015.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F984CC031A60B57000791027"
+            BlueprintIdentifier = "F97C25251A60BF9300C972A6"
             BuildableName = "HackUCSC2015.app"
             BlueprintName = "HackUCSC2015"
             ReferencedContainer = "container:HackUCSC2015.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F984CC031A60B57000791027"
+            BlueprintIdentifier = "F97C25251A60BF9300C972A6"
             BuildableName = "HackUCSC2015.app"
             BlueprintName = "HackUCSC2015"
             ReferencedContainer = "container:HackUCSC2015.xcodeproj">
