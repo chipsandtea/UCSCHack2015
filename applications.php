@@ -1,6 +1,6 @@
 <?php
 
-//require 'wp-include.php';
+require 'wp-blog-header.php';
 global $wpdb;
 
 $data = array();

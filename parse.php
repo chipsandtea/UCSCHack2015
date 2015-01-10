@@ -1,6 +1,7 @@
 <?php
 
-//require 'wp-include.php';
+require 'wp-blog-header.php';
+
 global $wpdb;
 
 $json_data = json_decode($_POST['data']);
@@ -11,5 +12,7 @@ foreach($json_data as $field)
 {
     update_post_meta($post_id, $field['meta_key'], $field['meta_value']);
 }
+
+echo json_encode(['success' => true, 'message' => 'Insert successful.']);
 
 ?>
