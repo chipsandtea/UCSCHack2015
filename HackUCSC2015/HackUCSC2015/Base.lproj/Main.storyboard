@@ -12,6 +12,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y6f-mp-mPs">
+                                <rect key="frame" x="16" y="374" width="992" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Data Entry">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YDY-bY-lWA" kind="push" id="5W7-Xo-EfF"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kiG-8o-7qK">
                                 <rect key="frame" x="20" y="574" width="988" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -32,23 +43,12 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an Option" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rhv-fw-9Qh">
-                                <rect key="frame" x="20" y="44" width="988" height="61"/>
+                                <rect key="frame" x="20" y="88" width="988" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y6f-mp-mPs">
-                                <rect key="frame" x="16" y="374" width="992" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Data Entry">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JjN-p3-QJ3" kind="push" id="sCM-yv-olV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -60,45 +60,98 @@
             </objects>
             <point key="canvasLocation" x="1358" y="679"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="s2Q-w1-03k">
+        <!--Marine Biology Data-->
+        <scene sceneID="APy-Db-MuI">
             <objects>
-                <viewController id="JjN-p3-QJ3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="D7J-GV-jAF">
+                <viewController id="orF-cf-dMw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ger-DV-hSP">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TSo-5I-QCQ"/>
+                    <tabBarItem key="tabBarItem" title="Marine Biology Data" id="gdd-m7-9Rs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hi4-ug-L5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3760" y="-1093"/>
+        </scene>
+        <!--Ecology Data-->
+        <scene sceneID="xz9-fl-IpP">
+            <objects>
+                <viewController id="hbq-ig-nKv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="InU-qU-RNW">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ecology Data" id="XJ8-fO-ypn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GJl-AC-R8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZC-7a-TFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="140"/>
+            <point key="canvasLocation" x="3760" y="-26"/>
+        </scene>
+        <!--Navigation Data-->
+        <scene sceneID="7Nd-eI-fRh">
+            <objects>
+                <viewController id="L35-JH-C7G" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hir-18-fH3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Navigation Data" id="3gT-AU-ct0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBv-5H-ooT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3760" y="-2245"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Age-LF-pap">
+            <objects>
+                <tabBarController id="YDY-bY-lWA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xpc-Nn-RWR"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aiy-i1-ggf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L35-JH-C7G" kind="relationship" relationship="viewControllers" id="dMm-uz-PR3"/>
+                        <segue destination="orF-cf-dMw" kind="relationship" relationship="viewControllers" id="mF3-1O-31G"/>
+                        <segue destination="hbq-ig-nKv" kind="relationship" relationship="viewControllers" id="cLV-lJ-bjt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afK-YA-IVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2432" y="-605"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Z1W-Uw-zHC">
             <objects>
                 <tableViewController id="Sf9-uE-UG2" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iac-NH-7Qk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iac-NH-7Qk">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VPY-8K-CUm">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPY-8K-CUm" id="rPX-m2-NqE">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="xbN-L5-vFY">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="Sf9-uE-UG2" id="CX4-Ng-JQU"/>
                             <outlet property="delegate" destination="Sf9-uE-UG2" id="C91-DE-AEE"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cX4-if-pfT"/>
+                    <keyCommands/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
