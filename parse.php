@@ -79,4 +79,6 @@ $data[] = $json_data['data']['group_data'];
 
 update_field('group_data', $data, $json_data['id']);
 
+echo json_encode(['success' => 'true', 'message' => 'Insert successful.']);
+
 ?>
