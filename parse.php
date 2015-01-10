@@ -77,48 +77,6 @@ $json_data = array(
 $data = get_field('group_data', $json_data['id']);
 $data[] = $json_data['data']['group_data'];
 
-
-//update_field('group_data', $json_data['data'], $json_data['id']);
 update_field('group_data', $data, $json_data['id']);
-
-//foreach($json_data['data']['group_data'] as $field => $value)
-//{
-//    if($field == 'biology' || $field == 'ecology' || $field == 'navigation')
-//    {
-//        update_sub_field($field, $value, $json_data['id']);
-//    }
-//}
-
-
-//$fields = get_fields($json_data['id']);
-//var_dump($fields);
-
-//update_field('group_data', $json_data['data'], $json_data['id']);
-
-
-//if(have_rows('group_data', $json_data['id']))
-//{
-//    while (have_rows('group_data')) : the_row();
-//
-//        // Your loop code
-//        echo the_sub_field('group_name');
-//
-//    endwhile;
-//
-//} else {
-//
-//    die(json_encode(['success' => false, 'message' => 'Invalid school ID.']));
-//
-//}
-
-//$post_id = $wpdb->get_var("SELECT id FROM wp_posts, wp_postmeta WHERE wp_postmeta.post_id = wp_posts.ID AND wp_posts.ID = " . $_POST['data']['id']);
-//
-//
-//foreach($json_data as $field)
-//{
-//    update_post_meta($post_id, $field['meta_key'], $field['meta_value']);
-//}
-
-//echo json_encode(['success' => true, 'message' => 'Update successful.']);
 
 ?>
