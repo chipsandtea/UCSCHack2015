@@ -14,6 +14,7 @@
 		F97C25331A60BF9300C972A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F97C25321A60BF9300C972A6 /* Images.xcassets */; };
 		F97C25361A60BF9300C972A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97C25341A60BF9300C972A6 /* LaunchScreen.xib */; };
 		F97C25421A60BF9300C972A6 /* HackUCSC2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C25411A60BF9300C972A6 /* HackUCSC2015Tests.swift */; };
+		F9878ACE1A622B43003D0CC2 /* MarineBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */; };
 		F9CD7E9B1A6201B7007D5601 /* NavigatorDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CD7E9A1A6201B7007D5601 /* NavigatorDataViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		F97C253B1A60BF9300C972A6 /* HackUCSC2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackUCSC2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97C25401A60BF9300C972A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97C25411A60BF9300C972A6 /* HackUCSC2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackUCSC2015Tests.swift; sourceTree = "<group>"; };
+		F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarineBioViewController.swift; sourceTree = "<group>"; };
 		F9CD7E9A1A6201B7007D5601 /* NavigatorDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				F9346CEC1A61F4BB0073191E /* HackData.h */,
 				F9346CED1A61F4BB0073191E /* HackData.m */,
 				F97C252D1A60BF9300C972A6 /* ViewController.swift */,
+				F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */,
 				F97C252F1A60BF9300C972A6 /* Main.storyboard */,
 				F97C25321A60BF9300C972A6 /* Images.xcassets */,
 				F97C25341A60BF9300C972A6 /* LaunchScreen.xib */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9878ACE1A622B43003D0CC2 /* MarineBioViewController.swift in Sources */,
 				F9CD7E9B1A6201B7007D5601 /* NavigatorDataViewController.swift in Sources */,
 				F97C252E1A60BF9300C972A6 /* ViewController.swift in Sources */,
 				F9346CEE1A61F4BB0073191E /* HackData.m in Sources */,

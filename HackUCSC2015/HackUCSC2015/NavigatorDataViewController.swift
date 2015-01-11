@@ -8,8 +8,19 @@
 
 import UIKit
 
-let bearingNum2 = "bearingNum2"
-let locationNum2 = "locationNum2"
+let bearing_1 = "bearing_1"//loc2
+let bearing_2 = "bearing_2"//loc3
+let bearing_3 = "bearing_3"//loc4
+let bearing1_degrees = "bearing1_degrees"//bearing#2
+let bearing2_degrees = "bearing2_degrees"//bearing#3
+let bearing3_degrees = "bearing3_degrees"//bearing#4
+let gps_latitude_degrees = "gps_latitude_degrees"
+let gps_latitude_min = "gps_latitude_min"
+let gps_latitude_sec = "gps_latitude_sec"
+let gps_longitude_degrees = "gps_longitude_degrees"
+let gps_longitude_min = "gps_longitude_min"
+let gps_longitude_sec = "gps_longitude_sec"
+let nwind_speed = "nwind_speed"
 
 class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
 
@@ -20,12 +31,17 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     @IBOutlet var Bearing2: UITextField!
     @IBOutlet var Bearing3: UITextField!
     @IBOutlet var Bearing4: UITextField!
+    //gps
     
-    @IBAction func Bearing2(sender: UITextField) {
-        sharedData().setObject(sender.text, forKey: bearingNum2)
-        println(sharedData().objectForKey(bearingNum2))
-        println(" hi \(sender.text)")
-    }
+    @IBOutlet var LATDEG: UITextField!
+    @IBOutlet var LONGDEG: UITextField!
+    @IBOutlet var LATMIN: UITextField!
+    @IBOutlet var LONGMIN: UITextField!
+    @IBOutlet var LATSEC: UITextField!
+    @IBOutlet var LONGSEC: UITextField!
+    
+    //wind
+    @IBOutlet var WINDSPEED: UITextField!
     
     var selectedLoc: UITextField!
     
@@ -34,7 +50,7 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pickLoc.hidden = true
-        Location2.text = locs[0]
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +86,21 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     }
     
     func gatherAllData () {
-        sharedData().setObject(Location2.text, forKey:locationNum2)
+        
+        sharedData().setObject(Location2.text, forKey:bearing_1)
+        sharedData().setObject(Location3.text, forKey:bearing_2)
+        sharedData().setObject(Location4.text, forKey:bearing_3)
+        sharedData().setObject(Bearing2.text, forKey:bearing1_degrees)
+        sharedData().setObject(Bearing3.text, forKey:bearing2_degrees)
+        sharedData().setObject(Bearing4.text, forKey:bearing3_degrees)
+        sharedData().setObject(LATDEG.text, forKey:gps_latitude_degrees)
+        sharedData().setObject(LONGDEG.text, forKey:gps_longitude_degrees)
+        sharedData().setObject(LATMIN.text, forKey:gps_latitude_min)
+        sharedData().setObject(LONGMIN.text, forKey:gps_longitude_min)
+        sharedData().setObject(LATSEC.text, forKey:gps_latitude_sec)
+        sharedData().setObject(LONGSEC.text, forKey:gps_longitude_sec)
+        sharedData().setObject(WINDSPEED.text, forKey:nwind_speed)
+
     }
     
     @IBAction func nextButtonHit(sender: UIButton) {
