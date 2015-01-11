@@ -10,14 +10,14 @@
 	<string>HackUCSC2015</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EABCB5DBA3CD41EB19B38CB87D368FF5DD16DF97</key>
+		<key>b3383602-909d-640a-74ca-ce57b7db7bff++505</key>
 		<string>https://github.com/arjungopisetty/UCSCHack2015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HackUCSC2015/HackUCSC2015.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EABCB5DBA3CD41EB19B38CB87D368FF5DD16DF97</key>
+		<key>b3383602-909d-640a-74ca-ce57b7db7bff++505</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EABCB5DBA3CD41EB19B38CB87D368FF5DD16DF97</string>
+	<string>b3383602-909d-640a-74ca-ce57b7db7bff++505</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EABCB5DBA3CD41EB19B38CB87D368FF5DD16DF97</string>
+			<string>b3383602-909d-640a-74ca-ce57b7db7bff++505</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UCSCHack2015</string>
 		</dict>
