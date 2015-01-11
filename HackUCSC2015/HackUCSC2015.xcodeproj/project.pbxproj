@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9346CEE1A61F4BB0073191E /* HackData.m in Sources */ = {isa = PBXBuildFile; fileRef = F9346CED1A61F4BB0073191E /* HackData.m */; };
 		F97C252C1A60BF9300C972A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C252B1A60BF9300C972A6 /* AppDelegate.swift */; };
 		F97C252E1A60BF9300C972A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C252D1A60BF9300C972A6 /* ViewController.swift */; };
 		F97C25311A60BF9300C972A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97C252F1A60BF9300C972A6 /* Main.storyboard */; };
 		F97C25331A60BF9300C972A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F97C25321A60BF9300C972A6 /* Images.xcassets */; };
 		F97C25361A60BF9300C972A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97C25341A60BF9300C972A6 /* LaunchScreen.xib */; };
 		F97C25421A60BF9300C972A6 /* HackUCSC2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97C25411A60BF9300C972A6 /* HackUCSC2015Tests.swift */; };
+		F9878ACE1A622B43003D0CC2 /* MarineBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */; };
+		F9CD7E9B1A6201B7007D5601 /* NavigatorDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CD7E9A1A6201B7007D5601 /* NavigatorDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9346CEC1A61F4BB0073191E /* HackData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HackData.h; sourceTree = "<group>"; };
+		F9346CED1A61F4BB0073191E /* HackData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HackData.m; sourceTree = "<group>"; };
+		F9346CEF1A61F5EB0073191E /* HackUCSC2015-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HackUCSC2015-Bridging-Header.h"; sourceTree = "<group>"; };
 		F97C25261A60BF9300C972A6 /* HackUCSC2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackUCSC2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97C252A1A60BF9300C972A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97C252B1A60BF9300C972A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		F97C253B1A60BF9300C972A6 /* HackUCSC2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackUCSC2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97C25401A60BF9300C972A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97C25411A60BF9300C972A6 /* HackUCSC2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackUCSC2015Tests.swift; sourceTree = "<group>"; };
+		F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarineBioViewController.swift; sourceTree = "<group>"; };
+		F9CD7E9A1A6201B7007D5601 /* NavigatorDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +86,16 @@
 			isa = PBXGroup;
 			children = (
 				F97C252B1A60BF9300C972A6 /* AppDelegate.swift */,
+				F9CD7E9A1A6201B7007D5601 /* NavigatorDataViewController.swift */,
+				F9346CEC1A61F4BB0073191E /* HackData.h */,
+				F9346CED1A61F4BB0073191E /* HackData.m */,
 				F97C252D1A60BF9300C972A6 /* ViewController.swift */,
+				F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */,
 				F97C252F1A60BF9300C972A6 /* Main.storyboard */,
 				F97C25321A60BF9300C972A6 /* Images.xcassets */,
 				F97C25341A60BF9300C972A6 /* LaunchScreen.xib */,
 				F97C25291A60BF9300C972A6 /* Supporting Files */,
+				F9346CEF1A61F5EB0073191E /* HackUCSC2015-Bridging-Header.h */,
 			);
 			path = HackUCSC2015;
 			sourceTree = "<group>";
@@ -212,7 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9878ACE1A622B43003D0CC2 /* MarineBioViewController.swift in Sources */,
+				F9CD7E9B1A6201B7007D5601 /* NavigatorDataViewController.swift in Sources */,
 				F97C252E1A60BF9300C972A6 /* ViewController.swift in Sources */,
+				F9346CEE1A61F4BB0073191E /* HackData.m in Sources */,
 				F97C252C1A60BF9300C972A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HackUCSC2015/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackUCSC2015/HackUCSC2015-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -349,9 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HackUCSC2015/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackUCSC2015/HackUCSC2015-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -409,6 +430,7 @@
 				F97C25471A60BF9300C972A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F97C25481A60BF9300C972A6 /* Build configuration list for PBXNativeTarget "HackUCSC2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +439,7 @@
 				F97C254A1A60BF9300C972A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
