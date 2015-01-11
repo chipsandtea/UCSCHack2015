@@ -222,6 +222,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Bearing3:" destination="XEn-Cw-P7P" eventType="editingDidEnd" id="Y7B-cc-RdA"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="a58-CR-I07">
                                 <rect key="frame" x="256" y="225" width="97" height="30"/>
@@ -255,18 +258,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XEn-Cw-P7P" id="yJT-dK-V1Z"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="v7C-q9-E4o">
                                 <rect key="frame" x="782" y="225" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="ZOK-wI-yp6">
-                                <rect key="frame" x="782" y="107" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XEn-Cw-P7P" id="eAZ-qL-J3N"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XoV-xf-VgB">
                                 <rect key="frame" x="699" y="110" width="67" height="21"/>
@@ -423,6 +426,22 @@
                                     <action selector="Bearing2:" destination="XEn-Cw-P7P" eventType="editingDidEnd" id="cP0-po-Tem"/>
                                 </connections>
                             </textField>
+                            <pickerView contentMode="scaleToFill" id="j5e-di-VhG">
+                                <rect key="frame" x="-7" y="418" width="1024" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XEn-Cw-P7P" id="u5B-41-7hr"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="ZOK-wI-yp6">
+                                <rect key="frame" x="782" y="107" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XEn-Cw-P7P" id="hea-pP-Pel"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -431,6 +450,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="Bearing2" destination="Q5o-Ql-Uf9" id="S1F-US-iBy"/>
+                        <outlet property="Bearing3" destination="rkJ-9c-mgN" id="XLx-r4-Tlh"/>
+                        <outlet property="Bearing4" destination="a58-CR-I07" id="EeL-e4-cN4"/>
+                        <outlet property="Location2" destination="ZOK-wI-yp6" id="LD9-Wk-tF1"/>
+                        <outlet property="Location3" destination="IwM-1V-FTi" id="Ja5-X0-W2p"/>
+                        <outlet property="Location4" destination="v7C-q9-E4o" id="XqZ-Sz-zMS"/>
+                        <outlet property="pickLoc" destination="j5e-di-VhG" id="rJz-Y5-gOA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bjv-Ee-ec1" userLabel="First Responder" sceneMemberID="firstResponder"/>
