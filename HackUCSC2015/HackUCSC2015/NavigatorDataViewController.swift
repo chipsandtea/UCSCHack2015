@@ -90,9 +90,11 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         return true
     }
     
-    func gatherAllData () {
+    func gatherAllData() {
         
         var aDictionary = [String : String]()
+        var bDictionary = [String : String]()
+
         aDictionary[bearing_1] = Location2.text
         aDictionary[bearing_2] = Location3.text
         aDictionary[bearing_3] = Location4.text
@@ -130,8 +132,10 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         
  //       aDictionary.setObject(Location2.text, forKey:bearing_1)
         
-        sharedData().setObject(aDictionary, forKey: "navigation_data")
         
+        sharedData().setObject(aDictionary, forKey: "navigation_data")
+        sharedData().setObject(bDictionary, forKey: "array")
+
         //NEST ON THIRD!!!
         
         //sharedData()

@@ -208,6 +208,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButtonHit2:" destination="orF-cf-dMw" eventType="touchUpInside" id="BwH-gC-huZ"/>
                                     <segue destination="8er-IY-d3h" kind="push" id="z5M-XX-O8O"/>
                                 </connections>
                             </button>
@@ -224,8 +225,8 @@
                         <outlet property="BROWN" destination="poc-6c-0qI" id="TkU-Or-hUr"/>
                         <outlet property="DEPTH" destination="9LO-qa-8ob" id="yOY-4R-sgP"/>
                         <outlet property="GREEN" destination="9pQ-ER-HqI" id="eEV-26-jDD"/>
-                        <outlet property="PANLSPEC" destination="Y8m-n8-c2M" id="fDp-Nq-iUo"/>
-                        <outlet property="PLANKNUM" destination="YTK-Cp-e1o" id="6wK-5t-JDw"/>
+                        <outlet property="PLANKNUM" destination="YTK-Cp-e1o" id="MES-YS-Ras"/>
+                        <outlet property="PLANKSPEC" destination="Y8m-n8-c2M" id="Mur-EM-nFR"/>
                         <outlet property="RED" destination="pOS-uK-L4B" id="rw8-ao-uDQ"/>
                         <outlet property="SALIN" destination="IPa-dk-NdX" id="O7o-Jf-lSY"/>
                         <outlet property="TEMP" destination="6xW-au-eT1" id="zgr-bQ-U7C"/>
@@ -472,26 +473,11 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w5A-H1-gy0">
-                                <rect key="frame" x="474" y="672" width="77" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButtonHit:" destination="XEn-Cw-P7P" eventType="touchUpInside" id="wmH-5Y-F2Q"/>
-                                    <segue destination="orF-cf-dMw" kind="push" id="WuK-zY-gkB"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="Q5o-Ql-Uf9">
                                 <rect key="frame" x="256" y="106" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="Bearing2:" destination="XEn-Cw-P7P" eventType="editingDidEnd" id="cP0-po-Tem"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Observation:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zo0-m4-22Y">
                                 <rect key="frame" x="136" y="488" width="166" height="21"/>
@@ -557,6 +543,18 @@
                                 <rect key="frame" x="184" y="437" width="1024" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w5A-H1-gy0">
+                                <rect key="frame" x="474" y="673" width="77" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonHit:" destination="XEn-Cw-P7P" eventType="touchUpInside" id="OAk-co-PLW"/>
+                                    <segue destination="orF-cf-dMw" kind="push" id="AVB-vj-6N6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -693,6 +691,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YQH-jr-YvH"/>
+        <segue reference="H5N-XM-DRx"/>
     </inferredMetricsTieBreakers>
 </document>

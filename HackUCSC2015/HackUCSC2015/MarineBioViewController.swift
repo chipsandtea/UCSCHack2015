@@ -8,6 +8,16 @@
 
 import UIKit
 
+let bmeasurement_time = "bmeasurement_time"
+let bmeasurement_date = "bmeasurement_date"
+let bsurface_temperature = "bsurface_temperature"
+let bseawater_depth = "bseawater_depth"
+let bseawater_visibility = "bseawater_visibility"
+let bseawater_salinity = "bseawater_salinity"
+let bplankton_sample = "bplankton_sample"//number
+let bplankton_notes = "bplankton_notes"//actually species
+let bseawater_color = "bseawater_color"
+
 class MarineBioViewController: UIViewController {
 
     @IBOutlet var TEMP: UITextField!
@@ -15,7 +25,7 @@ class MarineBioViewController: UIViewController {
     @IBOutlet var DEPTH: UITextField!
     @IBOutlet var SALIN: UITextField!
     @IBOutlet var PLANKNUM: UITextField!
-    @IBOutlet var PANLSPEC: UITextField!
+    @IBOutlet var PLANKSPEC: UITextField!
     
     // water color options
     @IBOutlet var BROWN: UIButton!
@@ -25,10 +35,12 @@ class MarineBioViewController: UIViewController {
     @IBOutlet var YELLGREEN: UIButton!
     @IBOutlet var BLUGREEN: UIButton!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading 
+        // Do any additional setup after loading
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +48,27 @@ class MarineBioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func gatherAllData2(){
+        var cDictionary = [String : String]()
+        
+        cDictionary[bsurface_temperature] = TEMP.text
+        cDictionary[bseawater_visibility] = VISIB.text
+        cDictionary[bseawater_depth] = DEPTH.text
+        cDictionary[bseawater_salinity] = SALIN.text
+        cDictionary[bplankton_sample] = PLANKNUM.text
+        cDictionary[bplankton_notes] = PLANKSPEC.text
+        //cDictionary[] = .text
+        //cDictionary[] = .text
 
+        
+        sharedData().setObject(cDictionary, forKey: "biology")
+        println(sharedData())
+    }
+    
+    @IBAction func nextButtonHit2(sender: UIButton) {
+        gatherAllData2()
+    }
+    
     /*
     // MARK: - Navigation
 
