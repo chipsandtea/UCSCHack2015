@@ -27,6 +27,7 @@ let nweather_observation = "nweather_observation"
 class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
 
     @IBOutlet var StartingTime: UILabel!
+    
     @IBOutlet var pickLoc: UIPickerView! = UIPickerView()
     @IBOutlet var Location2: UITextField!
     @IBOutlet var Location3: UITextField!
@@ -34,21 +35,38 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     @IBOutlet var Bearing2: UITextField!
     @IBOutlet var Bearing3: UITextField!
     @IBOutlet var Bearing4: UITextField!
-    //gps
+    @IBOutlet var B2Label: UILabel!
+    @IBOutlet var B3Label: UILabel!
+    @IBOutlet var B4Label: UILabel!
+    @IBOutlet var L2Label: UILabel!
+    @IBOutlet var L3Label: UILabel!
+    @IBOutlet var L4Label: UILabel!
     
+    //gps
     @IBOutlet var LATDEG: UITextField!
     @IBOutlet var LONGDEG: UITextField!
     @IBOutlet var LATMIN: UITextField!
     @IBOutlet var LONGMIN: UITextField!
     @IBOutlet var LATSEC: UITextField!
     @IBOutlet var LONGSEC: UITextField!
+    @IBOutlet var GPSLabel: UILabel!
+    @IBOutlet var LatLabel: UILabel!
+    @IBOutlet var LongLabel: UILabel!
+    @IBOutlet var D1Label: UILabel!
+    @IBOutlet var D2Label: UILabel!
+    @IBOutlet var M1Label: UILabel!
+    @IBOutlet var M2Label: UILabel!
+    @IBOutlet var S1Label: UILabel!
+    @IBOutlet var S2Label: UILabel!
     
     //wind
     @IBOutlet var WINDSPEED: UITextField!
-    
     @IBOutlet var DEPTH: UITextField!
+    @IBOutlet var WSLabel: UILabel!
+    @IBOutlet var DepthLabel: UILabel!
     
     //wethur
+    @IBOutlet var WOLabel: UILabel!
     @IBOutlet var weatherLabel: UILabel!
     @IBOutlet var SunnyButton: UIButton!
     @IBOutlet var LFButton: UIButton!
@@ -58,6 +76,12 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     @IBOutlet var LRButton: UIButton!
     @IBOutlet var HRButton: UIButton!
     
+    //tabs
+    @IBOutlet var BLTabButton: UIButton!
+    @IBOutlet var GPSTabButton: UIButton!
+    @IBOutlet var WDTabButton: UIButton!
+    @IBOutlet var WeTabButton: UIButton!
+    
     var selectedLoc: UITextField!
     
     
@@ -66,8 +90,16 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pickLoc.hidden = true
+        BLTabButton.layer.borderWidth = 1
+        GPSTabButton.layer.borderWidth = 1
+        WDTabButton.layer.borderWidth = 1
+        WeTabButton.layer.borderWidth = 1
+        hideGPS(true)
+        hideWeather(true)
+        hideWind(true)
 
     }
+    
     @IBAction func sunnyChosen(sender: UIButton) {
         weatherLabel.text = "sunny"
     }
@@ -94,6 +126,142 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         weatherLabel.text = "light rain"
     }
     
+    @IBAction func WDPressed(sender: UIButton) {
+        hideBL(true)
+        hideGPS(true)
+        hideWeather(true)
+        hideWind(false)
+    }
+    
+    @IBAction func WePressed(sender: UIButton) {
+        hideBL(true)
+        hideWind(true)
+        hideGPS(true)
+        hideWeather(false)
+    }
+    
+
+    @IBAction func GPSPressed(sender: UIButton) {
+        hideBL(true)
+        hideWind(true)
+        hideWeather(true)
+        hideGPS(false)
+    }
+    
+    @IBAction func BLPressed(sender: UIButton) {
+        hideGPS(true)
+        hideWind(true)
+        hideWeather(true)
+        hideBL(false)
+    }
+    
+    func hideWeather(sender:Bool){
+        if(sender){
+            WOLabel.hidden = true
+            weatherLabel.hidden = true
+            SunnyButton.hidden = true
+            LFButton.hidden = true
+            HFButton.hidden = true
+            PCButton.hidden = true
+            LRButton.hidden = true
+            OCButton.hidden = true
+            HRButton.hidden = true
+        }else{
+            WOLabel.hidden = false
+            weatherLabel.hidden = false
+            SunnyButton.hidden = false
+            LFButton.hidden = false
+            HFButton.hidden = false
+            PCButton.hidden = false
+            LRButton.hidden = false
+            OCButton.hidden = false
+            HRButton.hidden = false
+        }
+        
+    }
+    
+    func hideWind(sender:Bool){
+        if(sender){
+            WINDSPEED.hidden = true
+            DEPTH.hidden = true
+            WSLabel.hidden = true
+            DepthLabel.hidden = true
+        }else{
+            WINDSPEED.hidden = false
+            DEPTH.hidden = false
+            WSLabel.hidden = false
+            DepthLabel.hidden = false
+        }
+    }
+    
+    func hideGPS(sender:Bool){
+        if(sender){
+            LATDEG.hidden = true
+            LONGDEG.hidden = true
+            LATMIN.hidden = true
+            LONGMIN.hidden = true
+            LATSEC.hidden = true
+            LONGSEC.hidden = true
+            GPSLabel.hidden = true
+            LatLabel.hidden = true
+            LongLabel.hidden = true
+            D1Label.hidden = true
+            D2Label.hidden = true
+            M1Label.hidden = true
+            M2Label.hidden = true
+            S1Label.hidden = true
+            S2Label.hidden = true
+        }else{
+            LATDEG.hidden = false
+            LONGDEG.hidden = false
+            LATMIN.hidden = false
+            LONGMIN.hidden = false
+            LATSEC.hidden = false
+            LONGSEC.hidden = false
+            GPSLabel.hidden = false
+            LatLabel.hidden = false
+            LongLabel.hidden = false
+            D1Label.hidden = false
+            D2Label.hidden = false
+            M1Label.hidden = false
+            M2Label.hidden = false
+            S1Label.hidden = false
+            S2Label.hidden = false
+        }
+    }
+    
+    func hideBL(sender: Bool){
+        if(sender){
+            Location2.hidden = true
+            Location3.hidden = true
+            Location4.hidden = true
+            Bearing2.hidden = true
+            Bearing3.hidden = true
+            Bearing4.hidden = true
+            B2Label.hidden = true
+            B3Label.hidden = true
+            B4Label.hidden = true
+            L2Label.hidden = true
+            L3Label.hidden = true
+            L4Label.hidden = true
+            pickLoc.hidden = true
+        }else{
+            Location2.hidden = false
+            Location3.hidden = false
+            Location4.hidden = false
+            Bearing2.hidden = false
+            Bearing3.hidden = false
+            Bearing4.hidden = false
+            B2Label.hidden = false
+            B3Label.hidden = false
+            B4Label.hidden = false
+            L2Label.hidden = false
+            L3Label.hidden = false
+            L4Label.hidden = false
+            pickLoc.hidden = true
+        }
+        
+    }
     
     
 
@@ -121,7 +289,7 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        if(textField.tag != -1) {
+        if(textField.tag != 0) {
             pickLoc.hidden = false
             selectedLoc = textField
             return false
