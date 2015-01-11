@@ -8,8 +8,10 @@ $data = array();
 $result = $wpdb->get_results(
 	"
 	SELECT post_title, ID
-	FROM wp_posts
-	WHERE post_type LIKE 'registration55'
+        FROM   wp_posts
+        WHERE post_type LIKE  'registration55' AND post_title != ''
+        ORDER BY post_date DESC
+        LIMIT 0, 100
 	"
 );
 

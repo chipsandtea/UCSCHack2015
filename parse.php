@@ -4,7 +4,14 @@ require 'wp-blog-header.php';
 
 global $wpdb;
 
-//$json_data = json_decode($_POST['data']);
+
+$str_json = str_replace('\"', '"', $_POST['data']);
+
+$json_data = json_decode($str_json, true, 10);
+var_dump($json_data);
+
+
+/*
 $json_data = array(
 
     'data' => array(
@@ -17,7 +24,7 @@ $json_data = array(
 
                 array(
 
-                    'bmeasurement_time' => 1,
+                    'bmeasurement_timee' => 1,
                     'bmeasurement_date' => 2,
                     'bsurface_temperature' => 3,
                     'bseawater_depth' => 4,
@@ -52,7 +59,7 @@ $json_data = array(
                     'bearing1_degrees' => 4,
                     'bearing_2' => 5,
                     'bearing2_degrees' => 6,
-                    'bearing_3' => 7,
+                    'bearing_3' => 'Cocoanut Grove',
                     'bearing3_degrees' => 8,
                     'gps_latitude_degrees' => 9,
                     'gps_latitude_min' => 10,
@@ -60,7 +67,7 @@ $json_data = array(
                     'gps_longitude_degrees' => 12,
                     'gps_longitude_min' => 13,
                     'gps_longitude_sec' => 14,
-                    'nweather_observation' => 15,
+                    'nweather_observation' => 'heavy fog',
                     'nwind_speed' => 16,
                     'ndepth' => 17
                 )
@@ -73,6 +80,11 @@ $json_data = array(
 
     'id' => 3482
 );
+*/
+
+$json_data['id'] = 3482;
+
+//echo var_export($json_data);
 
 $data = get_field('group_data', $json_data['id']);
 $data[] = $json_data['data']['group_data'];
