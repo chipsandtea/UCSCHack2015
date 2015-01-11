@@ -10,11 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate{
     
-    var loc = ["Cocoanut grove","Mile buoy","Radio towers","Soquel point","Santa Cruz Wharf","Harbor lighthouse","Steamer's lighthouse","Gov. buoy","Dream Inn","Seal rock","Giant dipper","Wharf elbow","Black's point"]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
