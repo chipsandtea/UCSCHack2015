@@ -22,9 +22,11 @@ let gps_longitude_min = "gps_longitude_min"
 let gps_longitude_sec = "gps_longitude_sec"
 let nwind_speed = "nwind_speed"
 let ndepth = "ndepth"
+let nweather_observation = "nweather_observation"
 
 class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
 
+    @IBOutlet var StartingTime: UILabel!
     @IBOutlet var pickLoc: UIPickerView! = UIPickerView()
     @IBOutlet var Location2: UITextField!
     @IBOutlet var Location3: UITextField!
@@ -46,9 +48,18 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     
     @IBOutlet var DEPTH: UITextField!
     
-    var weatherObs = ["sunny","light fog","heavy fog","partly cloudy","overcast","light rain","heavy rain"]
+    //wethur
+    @IBOutlet var weatherLabel: UILabel!
+    @IBOutlet var SunnyButton: UIButton!
+    @IBOutlet var LFButton: UIButton!
+    @IBOutlet var HFButton: UIButton!
+    @IBOutlet var PCButton: UIButton!
+    @IBOutlet var OCButton: UIButton!
+    @IBOutlet var LRButton: UIButton!
+    @IBOutlet var HRButton: UIButton!
     
     var selectedLoc: UITextField!
+    
     
     var locs = ["Cocoanut grove","Mile buoy","Radio towers","Soquel point","Santa Cruz Wharf","Harbor lighthouse","Steamer's lighthouse","Gov. buoy","Dream Inn","Seal rock","Giant dipper","Wharf elbow","Black's point"]
     
@@ -57,6 +68,34 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         pickLoc.hidden = true
 
     }
+    @IBAction func sunnyChosen(sender: UIButton) {
+        weatherLabel.text = "sunny"
+    }
+    @IBAction func LFChosen(sender: UIButton) {
+        weatherLabel.text = "light fog"
+    }
+    @IBAction func HFChosen(sender: UIButton) {
+        weatherLabel.text = "heavy fog"
+    }
+    
+    @IBAction func PCChosen(sender: UIButton) {
+        weatherLabel.text = "partly cloudy"
+    }
+    
+    @IBAction func OCChosen(sender: UIButton) {
+        weatherLabel.text = "overcast"
+    }
+    
+    @IBAction func HRChosen(sender: UIButton) {
+        weatherLabel.text = "heavy rain"
+    }
+    
+    @IBAction func LRChosen(sender: UIButton) {
+        weatherLabel.text = "light rain"
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,38 +148,30 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         aDictionary[gps_longitude_sec] = LONGSEC.text
         aDictionary[nwind_speed] = WINDSPEED.text
         aDictionary[ndepth] = DEPTH.text
-        
+        aDictionary[nweather_observation] = weatherLabel.text
 
-
-/*
-        sharedData().setObject(Location2.text, forKey:bearing_1)
-        sharedData().setObject(Location3.text, forKey:bearing_2)
-        sharedData().setObject(Location4.text, forKey:bearing_3)
-        sharedData().setObject(Bearing2.text, forKey:bearing1_degrees)
-        sharedData().setObject(Bearing3.text, forKey:bearing2_degrees)
-        sharedData().setObject(Bearing4.text, forKey:bearing3_degrees)
-        sharedData().setObject(LATDEG.text, forKey:gps_latitude_degrees)
-        sharedData().setObject(LONGDEG.text, forKey:gps_longitude_degrees
-        sharedData().setObject(LATMIN.text, forKey:gps_latitude_min)
-        sharedData().setObject(LONGMIN.text, forKey:gps_longitude_min)
-        sharedData().setObject(LATSEC.text, forKey:gps_latitude_sec)
-        sharedData().setObject(LONGSEC.text, forKey:gps_longitude_sec)
+        aDictionary["nmeasurement_time"] = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .NoStyle, timeStyle: .ShortStyle)
         
-        sharedData().setObject(WINDSPEED.text, forKey:nwind_speed)
-        sharedData().setObject(DEPTH.text, forKey:ndepth)
- */
+        aDictionary["nmeasurement_date"] = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .NoStyle)
+        
         
  //       aDictionary.setObject(Location2.text, forKey:bearing_1)
         
-        
-        sharedData().setObject(aDictionary, forKey: "navigation_data")
-        sharedData().setObject(bDictionary, forKey: "array")
+        var myNewDictArray: [[String:String]] = []
+        myNewDictArray.append(aDictionary)
+        //sharedData().setObject(aDictionary, forKey: "navigation_data")
+        sharedData().setObject(myNewDictArray, forKey: "navigation_data")
+        //var webClass = MyRequestController();
+        //sharedData(
+        //let jsooon = JSON(sharedData())
+        //println(jsooon)
+        //webClass.sendRequest(jsooon)
 
         //NEST ON THIRD!!!
         
         //sharedData()
         
-        println(sharedData())
+        //println(sharedData())
     }
     
     @IBAction func nextButtonHit(sender: UIButton) {
