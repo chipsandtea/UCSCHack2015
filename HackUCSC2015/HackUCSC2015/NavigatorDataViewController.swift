@@ -9,6 +9,7 @@
 import UIKit
 
 let bearingNum2 = "bearingNum2"
+let locationNum2 = "locationNum2"
 
 class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
 
@@ -60,11 +61,21 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        pickLoc.hidden = false
-        selectedLoc = textField
-        return false
+        if(textField.tag != -1) {
+            pickLoc.hidden = false
+            selectedLoc = textField
+            return false
+        }
+        return true
     }
     
+    func gatherAllData () {
+        sharedData().setObject(Location2.text, forKey:locationNum2)
+    }
+    
+    @IBAction func nextButtonHit(sender: UIButton) {
+        gatherAllData()
+    }
 
     /*
     // MARK: - Navigation
