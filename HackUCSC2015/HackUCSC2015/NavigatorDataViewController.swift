@@ -21,6 +21,7 @@ let gps_longitude_degrees = "gps_longitude_degrees"
 let gps_longitude_min = "gps_longitude_min"
 let gps_longitude_sec = "gps_longitude_sec"
 let nwind_speed = "nwind_speed"
+let ndepth = "ndepth"
 
 class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
 
@@ -42,6 +43,10 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     
     //wind
     @IBOutlet var WINDSPEED: UITextField!
+    
+    @IBOutlet var DEPTH: UITextField!
+    
+    var weatherObs = ["sunny","light fog","heavy fog","partly cloudy","overcast","light rain","heavy rain"]
     
     var selectedLoc: UITextField!
     
@@ -87,6 +92,25 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     
     func gatherAllData () {
         
+        var aDictionary = [String : String]()
+        aDictionary[bearing_1] = Location2.text
+        aDictionary[bearing_2] = Location3.text
+        aDictionary[bearing_3] = Location4.text
+        aDictionary[bearing1_degrees] = Bearing2.text
+        aDictionary[bearing2_degrees] = Bearing3.text
+        aDictionary[bearing3_degrees] = Bearing4.text
+        aDictionary[gps_latitude_degrees] = LATDEG.text
+        aDictionary[gps_longitude_degrees] = LONGDEG.text
+        aDictionary[gps_latitude_min] = LATMIN.text
+        aDictionary[gps_longitude_min] = LONGMIN.text
+        aDictionary[gps_latitude_sec] = LATSEC.text
+        aDictionary[gps_longitude_sec] = LONGSEC.text
+        aDictionary[nwind_speed] = WINDSPEED.text
+        aDictionary[ndepth] = DEPTH.text
+        
+
+
+/*
         sharedData().setObject(Location2.text, forKey:bearing_1)
         sharedData().setObject(Location3.text, forKey:bearing_2)
         sharedData().setObject(Location4.text, forKey:bearing_3)
@@ -94,13 +118,25 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         sharedData().setObject(Bearing3.text, forKey:bearing2_degrees)
         sharedData().setObject(Bearing4.text, forKey:bearing3_degrees)
         sharedData().setObject(LATDEG.text, forKey:gps_latitude_degrees)
-        sharedData().setObject(LONGDEG.text, forKey:gps_longitude_degrees)
+        sharedData().setObject(LONGDEG.text, forKey:gps_longitude_degrees
         sharedData().setObject(LATMIN.text, forKey:gps_latitude_min)
         sharedData().setObject(LONGMIN.text, forKey:gps_longitude_min)
         sharedData().setObject(LATSEC.text, forKey:gps_latitude_sec)
         sharedData().setObject(LONGSEC.text, forKey:gps_longitude_sec)
+        
         sharedData().setObject(WINDSPEED.text, forKey:nwind_speed)
-
+        sharedData().setObject(DEPTH.text, forKey:ndepth)
+ */
+        
+ //       aDictionary.setObject(Location2.text, forKey:bearing_1)
+        
+        sharedData().setObject(aDictionary, forKey: "navigation_data")
+        
+        //NEST ON THIRD!!!
+        
+        //sharedData()
+        
+        println(sharedData())
     }
     
     @IBAction func nextButtonHit(sender: UIButton) {

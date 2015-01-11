@@ -508,7 +508,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" id="j5e-di-VhG">
-                                <rect key="frame" x="300" y="69" width="1024" height="216"/>
+                                <rect key="frame" x="344" y="76" width="1024" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="XEn-Cw-P7P" id="u5B-41-7hr"/>
@@ -534,6 +534,29 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="VcP-MO-CDo">
+                                <rect key="frame" x="310" y="484" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter data" minimumFontSize="17" id="fud-d2-v5i">
+                                <rect key="frame" x="825" y="417" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depth:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8EK-3J-1VB">
+                                <rect key="frame" x="753" y="423" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="vda-G0-BCE">
+                                <rect key="frame" x="184" y="437" width="1024" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -544,6 +567,7 @@
                         <outlet property="Bearing2" destination="Q5o-Ql-Uf9" id="S1F-US-iBy"/>
                         <outlet property="Bearing3" destination="rkJ-9c-mgN" id="XLx-r4-Tlh"/>
                         <outlet property="Bearing4" destination="a58-CR-I07" id="EeL-e4-cN4"/>
+                        <outlet property="DEPTH" destination="fud-d2-v5i" id="abQ-JA-844"/>
                         <outlet property="LATDEG" destination="IDg-e8-giU" id="lRR-48-hBG"/>
                         <outlet property="LATMIN" destination="7ri-hJ-zsw" id="VFA-0Y-BQI"/>
                         <outlet property="LATSEC" destination="ww0-vG-0Kf" id="hwT-mT-Sal"/>
@@ -669,6 +693,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="H5N-XM-DRx"/>
+        <segue reference="YQH-jr-YvH"/>
     </inferredMetricsTieBreakers>
 </document>
