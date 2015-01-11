@@ -20,13 +20,19 @@ let bseawater_color = "bseawater_color"
 
 class MarineBioViewController: UIViewController, UIPickerViewDelegate {
 
+    //water
     @IBOutlet var TEMP: UITextField!
     @IBOutlet var VISIB: UITextField!
     @IBOutlet var DEPTH: UITextField!
     @IBOutlet var SALIN: UITextField!
     @IBOutlet var PLANKSPEC: UITextField!
+    @IBOutlet var TempLabel: UILabel!
+    @IBOutlet var VisLabel: UILabel!
+    @IBOutlet var DepthLabel: UILabel!
+    @IBOutlet var SalLabel: UILabel!
     
     // water color options
+    @IBOutlet var WCLabel: UILabel!
     @IBOutlet var BROWN: UIButton!
     @IBOutlet var BLUE: UIButton!
     @IBOutlet var RED: UIButton!
@@ -35,12 +41,21 @@ class MarineBioViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet var BLUGREEN: UIButton!
 
     // plankton descriptions
+    @IBOutlet var PSNLabel: UILabel!
     @IBOutlet var MZP: UIButton!
     @IBOutlet var MPP: UIButton!
     @IBOutlet var AHH: UIButton!
     @IBOutlet var planktonSelection: UILabel!
     
     @IBOutlet var colorSelection: UILabel!
+    
+    @IBOutlet var PlankSLabel: UILabel!
+    
+    //Buttons
+    @IBOutlet var WPButton: UIButton!
+    @IBOutlet var WCButton: UIButton!
+    @IBOutlet var PSNButton: UIButton!
+    @IBOutlet var PSButton: UIButton!
     
     // COLORS
     @IBAction func brownChosen(sender: UIButton) {
@@ -76,13 +91,116 @@ class MarineBioViewController: UIViewController, UIPickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        WPButton.layer.borderWidth = 1
+        WCButton.layer.borderWidth = 1
+        PSNButton.layer.borderWidth = 1
+        PSButton.layer.borderWidth = 1
+        hidePSN(true)
+        hideWaterCol(true)
+        hidePS(true)
         // Do any additional setup after loading
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func WPPressed(sender: UIButton) {
+        hideWaterCol(true)
+        hidePSN(true)
+        hidePS(true)
+        hideWaterQ(false)
+    }
+    
+    @IBAction func WCPressed(sender: UIButton) {
+        hidePSN(true)
+        hidePS(true)
+        hideWaterQ(true)
+        hideWaterCol(false)
+    }
+    
+    @IBAction func PSNPressed(sender: UIButton) {
+        hideWaterCol(true)
+        hidePS(true)
+        hideWaterQ(true)
+        hidePSN(false)
+    }
+    @IBAction func PSPressed(sender: UIButton) {
+        hideWaterCol(true)
+        hidePSN(true)
+        hideWaterQ(true)
+        hidePS(false)
+    }
+    
+    func hidePS(sender:Bool){
+        if(sender){
+            PlankSLabel.hidden = true
+            PLANKSPEC.hidden = true
+        }else{
+            PlankSLabel.hidden = false
+            PLANKSPEC.hidden = false
+        }
+        
+    }
+    
+    func hideWaterQ(sender:Bool){
+        if(sender){
+            TEMP.hidden = true
+            VISIB.hidden = true
+            DEPTH.hidden = true
+            SALIN.hidden = true
+            TempLabel.hidden = true
+            VisLabel.hidden = true
+            DepthLabel.hidden = true
+            SalLabel.hidden = true
+        }else{
+            TEMP.hidden = false
+            VISIB.hidden = false
+            DEPTH.hidden = false
+            SALIN.hidden = false
+            TempLabel.hidden = false
+            VisLabel.hidden = false
+            DepthLabel.hidden = false
+            SalLabel.hidden = false
+        }
+    }
+    
+    func hideWaterCol(sender:Bool){
+        if(sender){
+            WCLabel.hidden = true
+            BROWN.hidden = true
+            BLUE.hidden = true
+            RED.hidden = true
+            GREEN.hidden = true
+            YELLGREEN.hidden = true
+            BLUGREEN.hidden = true
+            colorSelection.hidden = true
+        }else{
+            WCLabel.hidden = false
+            BROWN.hidden = false
+            BLUE.hidden = false
+            RED.hidden = false
+            GREEN.hidden = false
+            YELLGREEN.hidden = false
+            BLUGREEN.hidden = false
+            colorSelection.hidden = false
+        }
+    }
+    
+    func hidePSN(sender:Bool){
+        if(sender){
+            PSNLabel.hidden = true
+            MZP.hidden = true
+            MPP.hidden = true
+            AHH.hidden = true
+            planktonSelection.hidden = true
+        }else{
+            PSNLabel.hidden = false
+            MZP.hidden = false
+            MPP.hidden = false
+            AHH.hidden = false
+            planktonSelection.hidden = false
+        }
     }
     
     func gatherAllData2(){

@@ -41,6 +41,10 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+    }
+    
     @IBAction func onSendDataPress(sender: AnyObject) {
         
         var webClass = MyRequestController();
