@@ -61,7 +61,7 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     var selectedLoc: UITextField!
     
     
-    var locs = ["Cocoanut grove","Mile buoy","Radio towers","Soquel point","Santa Cruz Wharf","Harbor lighthouse","Steamer's lighthouse","Gov. buoy","Dream Inn","Seal rock","Giant dipper","Wharf elbow","Black's point"]
+    var locs = ["Cocoanut Grove","Mile Buoy","Radio Towers","Soquel Point","Santa Cruz Wharf","Harbor Lighthouse","Steamers Lighthouse","Government Buoy","Dream Inn","Seal Rock","Giant Dipper","Wharf Elbow","Black's Point"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

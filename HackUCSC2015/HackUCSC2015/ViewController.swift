@@ -10,12 +10,51 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate{
     
-    var loc = ["Cocoanut grove","Mile buoy","Radio towers","Soquel point","Santa Cruz Wharf","Harbor lighthouse","Steamer's lighthouse","Gov. buoy","Dream Inn","Seal rock","Giant dipper","Wharf elbow","Black's point"]
+    @IBOutlet weak var schoolPicker: UIPickerView!
+    @IBOutlet weak var groupNameTextView: UITextField!
+    @IBOutlet weak var firstContinueButton: UIButton!
     
+    var contents = [String]()
+    var dict = [String : String]()
+    
+    @IBOutlet weak var sendData: UIButton!
     
     override func viewDidLoad() {
+        
+        var newClass = MyRequestController()
+        var schools = []
+        
+        newClass.get() { (json: JSON) -> () in
+            
+            for (key: String, subJson: JSON) in json {
+                
+                self.contents.append(subJson["school"].stringValue)
+                self.dict[subJson["school"].stringValue] = subJson["id"].stringValue
+                
+            }
+            
+            if(self.schoolPicker != nil) {
+                self.schoolPicker.reloadAllComponents() }
+        }
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func onSendDataPress(sender: AnyObject) {
+        
+        var webClass = MyRequestController();
+        //sharedData(
+        let json = JSON(cData())
+        //println(jsooon)
+        webClass.sendRequest(json)
+        
+    }
+    
+    @IBAction func firstContinueOnPress(sender: AnyObject) {
+        
+        sharedData().setObject(groupNameTextView.text, forKey:"group_name")
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,4 +62,19 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int{
+        return contents.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        cData().setObject(self.dict[contents[row]]!, forKey: "id")
+    }
+    
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String!{
+        return contents[row]
+    }
 }

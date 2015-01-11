@@ -10,3 +10,7 @@
 
 NSMutableDictionary* sharedData();
 
+NSMutableDictionary* bData();
+
+NSMutableDictionary* cData();
+

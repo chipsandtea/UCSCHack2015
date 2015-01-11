@@ -94,6 +94,7 @@ class MarineBioViewController: UIViewController, UIPickerViewDelegate {
         cDictionary[bseawater_salinity] = SALIN.text
         cDictionary[bplankton_sample] = planktonSelection.text
         cDictionary[bplankton_notes] = PLANKSPEC.text
+        cDictionary[bseawater_color] = colorSelection.text
         //cDictionary[] = .text
         //cDictionary[] = .text
         
