@@ -1028,7 +1028,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dvb-r1-wRf" kind="push" id="XuR-70-k2N"/>
+                                    <segue destination="dvb-r1-wRf" kind="push" id="tA9-7v-070"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="bHT-98-Eye">
@@ -1041,9 +1041,6 @@
                     <navigationItem key="navigationItem" title="Home Screen" id="ijs-pO-2xE"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="ProceedButton" destination="tZ9-Om-hLR" id="CjL-Cn-9hq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9YH-e1-wM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1066,6 +1063,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="H5N-XM-DRx"/>
+        <segue reference="64y-wF-jS9"/>
     </inferredMetricsTieBreakers>
 </document>
