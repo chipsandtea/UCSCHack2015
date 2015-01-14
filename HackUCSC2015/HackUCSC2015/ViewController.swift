@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate{
+class ViewController: ResponsiveTextFieldViewController, UIPickerViewDelegate{
     
     @IBOutlet weak var schoolPicker: UIPickerView!
     @IBOutlet weak var groupNameTextView: UITextField!

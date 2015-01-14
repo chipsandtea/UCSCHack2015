@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DA8DD7E1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8DD7D1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift */; };
 		9DC569291A66CBEE00DA0FCB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC569281A66CBEE00DA0FCB /* SwiftyJSON.swift */; };
 		F9346CEE1A61F4BB0073191E /* HackData.m in Sources */ = {isa = PBXBuildFile; fileRef = F9346CED1A61F4BB0073191E /* HackData.m */; };
 		F96988BE1A625D9700799130 /* web.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96988BD1A625D9700799130 /* web.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DA8DD7D1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		9DC569281A66CBEE00DA0FCB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F9346CEC1A61F4BB0073191E /* HackData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HackData.h; sourceTree = "<group>"; };
 		F9346CED1A61F4BB0073191E /* HackData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HackData.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		F97C25281A60BF9300C972A6 /* HackUCSC2015 */ = {
 			isa = PBXGroup;
 			children = (
+				9DA8DD7D1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift */,
 				9DC569281A66CBEE00DA0FCB /* SwiftyJSON.swift */,
 				F97C252B1A60BF9300C972A6 /* AppDelegate.swift */,
 				F96988BD1A625D9700799130 /* web.swift */,
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA8DD7E1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift in Sources */,
 				F9878ACE1A622B43003D0CC2 /* MarineBioViewController.swift in Sources */,
 				F9CD7E9B1A6201B7007D5601 /* NavigatorDataViewController.swift in Sources */,
 				F96988BE1A625D9700799130 /* web.swift in Sources */,
