@@ -30,6 +30,10 @@ class EcologyViewController: UIViewController {
         phValue.text = temp
     }
     
+    @IBAction func nextButtonHit3(sender: UIButton) {
+        gatherAllData3()
+    }
+    
     func gatherAllData3(){
         var dDictionary = [String : String]()
         dDictionary["seawater_ph"] = phValue.text
@@ -41,12 +45,13 @@ class EcologyViewController: UIViewController {
         var myNewDictArray: [[String:String]] = []
         myNewDictArray.append(dDictionary)
         sharedData().setObject(myNewDictArray, forKey: "ecology")
-        println(sharedData())
+        //println(sharedData())
+        
+        bData().setObject(sharedData(), forKey: "group_data")
+        cData().setObject(bData(), forKey: "data")
+        println(cData())
     }
     
-    @IBAction func nextButtonHit3(sender: UIButton) {
-        gatherAllData3()
-    }
 /*
     // MARK: - Navigation
 

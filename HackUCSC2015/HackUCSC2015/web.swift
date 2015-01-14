@@ -37,6 +37,56 @@ import UIKit
 //  THE SOFTWARE.
 
 class MyRequestController {
+    
+    //func get(completedFunction: (JSON)) {
+    //postCompleted : (succeeded: Bool, msg: String) -> ()
+    func get(completedFunction : (json: JSON) ->()) {
+        /* Configure session, choose between:
+        * defaultSessionConfiguration
+        * ephemeralSessionConfiguration
+        * backgroundSessionConfigurationWithIdentifier:
+        And set session-wide properties, such as: HTTPAdditionalHeaders,
+        HTTPCookieAcceptPolicy, requestCachePolicy or timeoutIntervalForRequest.
+        */
+        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        
+        /* Create session, and optionally set a NSURLSessionDelegate. */
+        let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+        
+        /* Create the Request:
+        My API (2) (POST http://oneillseaodyssey.org/testing.php)
+        */
+        
+        var URL = NSURL(string: "http://oneillseaodyssey.org/applications.php")
+        let request = NSMutableURLRequest(URL: URL!)
+        request.HTTPMethod = "GET"
+        var myJson = JSON([1,2])
+        
+        /* Start a new Task */
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data : NSData!, response : NSURLResponse!, error : NSError!) -> Void in
+            if (error == nil) {
+                // Success
+                let statusCode = (response as NSHTTPURLResponse).statusCode
+                let json = JSON(data: data)
+                //println(json)
+                //self.jsonData = json
+                //return json
+                //myJson = json
+                //super.
+                //self.
+                completedFunction(json: json)
+            }
+            else {
+                // Failure
+                println("URL Session Task Failed: %@", error.localizedDescription);
+            }
+        })
+        
+        task.resume()
+        
+        //return task.jsonData
+    }
+    
     func sendRequest(params : JSON) {
         /* Configure session, choose between:
         * defaultSessionConfiguration
@@ -54,7 +104,7 @@ class MyRequestController {
         My API (2) (POST http://oneillseaodyssey.org/testing.php)
         */
         
-        var URL = NSURL(string: "http://oneillseaodyssey.org/testing.php")
+        var URL = NSURL(string: "http://oneillseaodyssey.org/parse.php")
         let request = NSMutableURLRequest(URL: URL!)
         request.HTTPMethod = "POST"
         
@@ -78,6 +128,7 @@ class MyRequestController {
             ]
             //println("string:", string)
             //println("jsonString:", jsonString)
+            println(string)
             
             let bodyString = self.stringFromQueryParameters(bodyParameters)
             println ("bodyString:", bodyString);
