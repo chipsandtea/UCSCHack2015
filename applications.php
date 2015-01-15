@@ -17,7 +17,7 @@ $result = $wpdb->get_results(
 
 foreach ($result as $application)
 {
-    $data[] = ['school' => $application->post_title, 'id' => $application->ID];
+    $data[] = ['school' => ucwords(strtolower($application->post_title)), 'id' => $application->ID];
 }
 
 echo json_encode($data);
