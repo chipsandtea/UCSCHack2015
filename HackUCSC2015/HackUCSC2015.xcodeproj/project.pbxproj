@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8F38431A69709200F1F319 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F38421A69709200F1F319 /* EndViewController.swift */; };
+		9D8F38471A6970F600F1F319 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F38461A6970F600F1F319 /* CompletedViewController.swift */; };
 		9DA8DD7E1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8DD7D1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift */; };
 		9DC569291A66CBEE00DA0FCB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC569281A66CBEE00DA0FCB /* SwiftyJSON.swift */; };
 		F9346CEE1A61F4BB0073191E /* HackData.m in Sources */ = {isa = PBXBuildFile; fileRef = F9346CED1A61F4BB0073191E /* HackData.m */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D8F38421A69709200F1F319 /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		9D8F38461A6970F600F1F319 /* CompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		9DA8DD7D1A66D045006B17D4 /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		9DC569281A66CBEE00DA0FCB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F9346CEC1A61F4BB0073191E /* HackData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HackData.h; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		F97C251D1A60BF9300C972A6 = {
 			isa = PBXGroup;
 			children = (
+				9D8F38421A69709200F1F319 /* EndViewController.swift */,
 				F97C25281A60BF9300C972A6 /* HackUCSC2015 */,
 				F97C253E1A60BF9300C972A6 /* HackUCSC2015Tests */,
 				F97C25271A60BF9300C972A6 /* Products */,
@@ -104,6 +109,7 @@
 				F9878ACD1A622B43003D0CC2 /* MarineBioViewController.swift */,
 				F96988C11A627BCE00799130 /* EcologyViewController.swift */,
 				F97C252F1A60BF9300C972A6 /* Main.storyboard */,
+				9D8F38461A6970F600F1F319 /* CompletedViewController.swift */,
 				F97C25321A60BF9300C972A6 /* Images.xcassets */,
 				F97C25341A60BF9300C972A6 /* LaunchScreen.xib */,
 				F97C25291A60BF9300C972A6 /* Supporting Files */,
@@ -243,8 +249,10 @@
 				F96988BE1A625D9700799130 /* web.swift in Sources */,
 				F97C252E1A60BF9300C972A6 /* ViewController.swift in Sources */,
 				F9346CEE1A61F4BB0073191E /* HackData.m in Sources */,
+				9D8F38431A69709200F1F319 /* EndViewController.swift in Sources */,
 				9DC569291A66CBEE00DA0FCB /* SwiftyJSON.swift in Sources */,
 				F97C252C1A60BF9300C972A6 /* AppDelegate.swift in Sources */,
+				9D8F38471A6970F600F1F319 /* CompletedViewController.swift in Sources */,
 				F96988C21A627BCE00799130 /* EcologyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

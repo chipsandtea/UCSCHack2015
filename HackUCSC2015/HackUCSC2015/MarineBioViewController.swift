@@ -18,7 +18,7 @@ let bplankton_sample = "bplankton_sample"//number
 let bplankton_notes = "bplankton_notes"//actually species
 let bseawater_color = "bseawater_color"
 
-class MarineBioViewController: UIViewController, UIPickerViewDelegate {
+class MarineBioViewController: ResponsiveTextFieldViewController, UIPickerViewDelegate {
 
     //water
     @IBOutlet var TEMP: UITextField!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EcologyViewController: UIViewController {
+class EcologyViewController: ResponsiveTextFieldViewController {
     
     @IBOutlet var phSlider: UISlider!
     @IBOutlet var otterCount: UITextField!

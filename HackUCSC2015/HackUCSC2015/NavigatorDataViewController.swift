@@ -24,7 +24,7 @@ let nwind_speed = "nwind_speed"
 let ndepth = "ndepth"
 let nweather_observation = "nweather_observation"
 
-class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
+class NavigatorDataViewController: ResponsiveTextFieldViewController,UIPickerViewDelegate {
 
     @IBOutlet var StartingTime: UILabel!
     
