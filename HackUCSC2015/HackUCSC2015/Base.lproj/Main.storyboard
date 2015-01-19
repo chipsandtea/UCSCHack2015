@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BEACHHACK" id="Hvb-su-3KS">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plankton_bg" id="Hvb-su-3KS">
                                 <rect key="frame" x="0.0" y="0.0" width="1031" height="807"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -115,7 +115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.19999999999999968" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" id="onA-Z0-Bdb">
+                            <imageView userInteractionEnabled="NO" alpha="0.19999999999999968" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plankton_bg" id="onA-Z0-Bdb">
                                 <rect key="frame" x="0.0" y="0.0" width="1373" height="698"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -441,7 +441,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000007" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SEAOTTERHACK" id="acG-LG-yrU">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000007" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plankton_bg" id="acG-LG-yrU">
                                 <rect key="frame" x="0.0" y="0.0" width="1032" height="777"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -465,7 +465,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter otter count" minimumFontSize="17" id="Rc9-Nd-zSw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter otter count" textAlignment="center" minimumFontSize="17" id="Rc9-Nd-zSw">
                                 <rect key="frame" x="540" y="268" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -484,13 +484,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uFR-k2-BG4">
-                                <rect key="frame" x="540" y="320" width="59" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="0.0" maxValue="14" id="D0k-dh-9mW">
                                 <rect key="frame" x="365" y="390" width="295" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -498,6 +491,12 @@
                                     <action selector="sliderSlid:" destination="8er-IY-d3h" eventType="valueChanged" id="iBE-Xs-tKl"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="2eo-im-7Wl">
+                                <rect key="frame" x="540" y="322" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -507,7 +506,7 @@
                     <connections>
                         <outlet property="otterCount" destination="Rc9-Nd-zSw" id="xZK-qa-Y3x"/>
                         <outlet property="phSlider" destination="D0k-dh-9mW" id="4Yd-C1-WmF"/>
-                        <outlet property="phValue" destination="uFR-k2-BG4" id="lzt-rv-w5n"/>
+                        <outlet property="phValue" destination="2eo-im-7Wl" id="txj-TF-WQ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8S3-56-unt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -522,7 +521,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000007" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAPHACK" id="WyT-Bl-4n8">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000007" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plankton_bg" id="WyT-Bl-4n8">
                                 <rect key="frame" x="0.0" y="-7" width="1074" height="707"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -968,7 +967,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.25000000000000006" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SCHOOLHACK" id="wwM-9o-ePz">
+                            <imageView userInteractionEnabled="NO" alpha="0.25000000000000006" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plankton_bg" id="wwM-9o-ePz">
                                 <rect key="frame" x="-23" y="66" width="1059" height="744"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1026,7 +1025,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cp-tc-BOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-242" y="699"/>
+            <point key="canvasLocation" x="38" y="691"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Htc-32-09H">
@@ -1050,7 +1049,6 @@
         <!--Home Screen-->
         <scene sceneID="fTh-BG-tCw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9YH-e1-wM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="KiN-gh-HvA" customClass="IntroViewController" customModule="HackUCSC2015" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wBe-xg-xI0">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -1089,16 +1087,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9YH-e1-wM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1376" y="699"/>
         </scene>
     </scenes>
     <resources>
-        <image name="BEACHHACK" width="2984" height="1956"/>
-        <image name="MAPHACK" width="878" height="764"/>
-        <image name="SCHOOLHACK" width="1024" height="682"/>
-        <image name="SEAOTTERHACK" width="1024" height="768"/>
-        <image name="bg3" width="1920" height="1200"/>
         <image name="logo" width="301" height="143"/>
         <image name="plankton_bg" width="1077" height="768"/>
         <image name="turtle" width="49" height="38"/>
@@ -1109,7 +1103,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="64y-wF-jS9"/>
+        <segue reference="H5N-XM-DRx"/>
         <segue reference="SBy-RI-s0X"/>
     </inferredMetricsTieBreakers>
 </document>
